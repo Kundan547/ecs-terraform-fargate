@@ -1,12 +1,12 @@
 # environments/staging/terraform.tf
 terraform {
   required_version = ">= 1.0"
-  
+
   backend "s3" {
-    bucket         = "myapp-staging-terraform-state"
-    key            = "staging/terraform.tfstate"
-    region         = "us-west-2"
-    encrypt        = true
+    bucket  = "myapp-staging-terraform-state"
+    key     = "staging/terraform.tfstate"
+    region  = "us-west-2"
+    encrypt = true
   }
 
   required_providers {

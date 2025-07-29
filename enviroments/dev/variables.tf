@@ -169,12 +169,6 @@ variable "database_username" {
   default     = "postgres"
 }
 
-variable "database_password" {
-  description = "Database master password"
-  type        = string
-  sensitive   = true
-}
-
 variable "aurora_backup_retention_period" {
   description = "Aurora backup retention period"
   type        = number
@@ -271,4 +265,9 @@ variable "s3_noncurrent_version_expiration_days" {
   description = "S3 noncurrent version expiration days"
   type        = number
   default     = 90
+}
+variable "database_password" {
+  description = "Database master password"
+  type        = string
+  sensitive   = true
 }
