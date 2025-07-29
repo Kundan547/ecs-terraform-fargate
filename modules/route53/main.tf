@@ -55,7 +55,7 @@ resource "aws_route53_health_check" "main" {
   request_interval               = var.health_check_request_interval
   cloudwatch_alarm_region        = var.aws_region
   cloudwatch_alarm_name          = "${var.project_name}-health-check-alarm"
-  insufficient_data_health_status = "Failure"
+  insufficient_data_health_status = "Unhealthy"
 
   tags = {
     Name        = "${var.project_name}-health-check"
