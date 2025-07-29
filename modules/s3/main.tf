@@ -39,8 +39,12 @@ resource "aws_s3_bucket_lifecycle_configuration" "main" {
   bucket = aws_s3_bucket.main.id
 
   rule {
-    id     = "lifecycle_rule"
+    id     = "ExpireOldVersions"
     status = "Enabled"
+
+    filter {
+      prefix = "" # Apply to all objects
+    }
 
     expiration {
       days = var.expiration_days
