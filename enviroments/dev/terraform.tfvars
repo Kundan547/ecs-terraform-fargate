@@ -1,1 +1,1 @@
-database_password = "your_secure_password_here"
+database_password = "Kundan_547!"
