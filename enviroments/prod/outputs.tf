@@ -1,4 +1,4 @@
-# environments/prod/outputs.tf
+# environments/staging/outputs.tf
 output "vpc_id" {
   description = "ID of the VPC"
   value       = module.vpc.vpc_id
@@ -70,4 +70,3 @@ output "nat_gateway_public_ips" {
   description = "Public IPs of NAT Gateways"
   value       = module.nat_gateway.nat_gateway_public_ips
 }
-  
